@@ -1,4 +1,11 @@
-
+                          ---------------------------------
+                              ___  _______       ________
+                             /   |/_  __/ |     / /_  __/
+                            / /| | / /  | | /| / / / /   
+                           / ___ |/ /   | |/ |/ / / /    
+                          /_/  |_/_/    |__/|__/ /_/     
+                          
+                          ---------------------------------                            
 Hi there! Welcome to Adventure of Link Repo!
 
 1) Thank you for showing up and participating in the meetup
