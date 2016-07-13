@@ -1,0 +1,27 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+header ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+header {
+    text-align: center;
+}
+header h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+header img {
+    width: 150px;
+}
+
+pre {
+    font-weight: 700;
+}
+#mainContent {
+    width:750px;
+    margin: 0 auto;
+}

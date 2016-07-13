@@ -1,0 +1,69 @@
+
+
+
+/////////////////////////
+
+import { Component } from '@angular/core';
+import {ControlGroup, Control, ControlArray, RadioButtonState, FormBuilder} from '@angular/common';
+
+@Component({
+  selector: 'my-app',
+  moduleId: module.id,
+  templateUrl: 'gamer.component.html',
+  styleUrls: ['gamer-profile.component.css']
+
+})
+export class ATWTComp {
+  gamerProfileForm: ControlGroup;
+  specialRequestControls: ControlArray;
+  formActive = true;
+  constructor(private _formBuilder: FormBuilder) {
+    this._buildForm();
+  }
+  
+  private _buildForm() {
+    this.gamerProfileForm = this._formBuilder.group({
+      customerName: this._formBuilder.control(null),
+      genres: this._formBuilder.group({
+        action: this._formBuilder.control(null),
+        rpg: this._formBuilder.control(null),
+        adventure: this._formBuilder.control(null),
+        puzzle: this._formBuilder.control(null),
+        firstPersonShooter: this._formBuilder.control(null),
+      }),
+      gameCondition: this._formBuilder.group({
+        onlyNew: this._formBuilder.control(new RadioButtonState(false, 'Only New Games')),
+        usedAndNew: this._formBuilder.control(new RadioButtonState(false, 'Used and New Games')),
+        onlyUsed: this._formBuilder.control(new RadioButtonState(false, 'Only Used Games'))
+      }),
+      rating: this._formBuilder.group({
+        adult: this._formBuilder.control(null),
+        mature: this._formBuilder.control(null),
+        teen: this._formBuilder.control(null),
+        everyone: this._formBuilder.control(null)
+      }),
+      specialRequest: this._formBuilder.array([
+        this._formBuilder.control(null)
+      ]),
+      otherNotes: this._formBuilder.control(null)
+    });
+    
+    this.specialRequestControls = this.gamerProfileForm.find('specialRequest') as ControlArray;
+  }
+
+  onAddSpecialRequest() {
+    this.specialRequestControls.push(this._formBuilder.control(null));
+  }
+  
+  onRemoveSpecialRequest(index) {
+    this.specialRequestControls.removeAt(index);
+  }
+  
+  onClearForm() {
+    this._buildForm();
+    this.formActive = false;
+    setTimeout(() => {
+      this.formActive = true;
+    }, 0);
+  }
+}

@@ -1,0 +1,92 @@
+<header>
+  <h1>Gamer Profile</h1>
+</header>
+<form novalidate *ngIf="formActive" [ngFormModel]="gamerProfileForm" (ngSubmit)="onSubmitForm()">
+  <section class="customer-name">
+    Enter Your Name: <br />
+    <input type="text" placeholder="Your Name" ngControl="customerName">
+  </section>
+  <section>
+      <h1>Genres</h1>
+      <ul ngControlGroup="genres">
+        <li>
+          <input id="action" type="checkbox" ngControl="action">
+          <label for="action">Action</label>
+        </li>
+        <li>
+          <input id="rpg" type="checkbox" ngControl="rpg">
+          <label for="rpg">RPG</label>
+        </li>
+        <li>
+          <input id="adventure" type="checkbox" ngControl="adventure">
+          <label for="adventure">Adventure</label>
+        </li>
+        <li>
+          <input id="adventure" type="checkbox" ngControl="adventure">
+          <label for="adventure">Puzzle</label>
+        </li>
+        <li>
+          <input id="fps" type="checkbox" ngControl="firstPersonShooter">
+          <label for="fps">First Person Shooter</label>
+        </li>
+      </ul>
+    </section>
+  <section class="build-your-own">
+    <section>
+      <h1>Game Conditions</h1>
+      <ul ngControlGroup="gameCondition">
+        <li>
+          <input id="new-games" type="radio" name="new" ngControl="onlyNew">
+          <label for="new-games">Only New Games</label>
+        </li>
+        <li>
+          <input id="new-used-games" type="radio" name="usednew" ngControl="usedAndNew">
+          <label for="new-used-games">New and Used Games</label>
+        </li>
+        <li>
+          <input id="only-used" type="radio" name="onlyused" ngControl="onlyUsed">
+          <label for="only-used">Only Used Games</label>
+        </li>
+      </ul>
+    </section>
+  </section>
+  <section class="build-your-own">
+    <section>
+      <h1>Ratings</h1>
+      <ul ngControlGroup="rating">
+        <li>
+          <input id="adult" type="radio" name="adult" ngControl="adult">
+          <label for="adult">Adult and Lower Rated Games</label>
+        </li>
+        <li>
+          <input id="mature" type="radio" name="mature" ngControl="mature">
+          <label for="mature">Mature and Lower Rated Games</label>
+        </li>
+        <li>
+          <input id="teen" type="radio" name="teen" ngControl="teen">
+          <label for="teen">Teen and Lower Rated Games</label>
+        </li>
+        <li>
+          <input id="everyone" type="radio" name="everyone" ngControl="everyone">
+          <label for="everyone">Everyone</label>
+        </li>
+      </ul>
+    </section>
+  </section>
+  <section class="weird-requests">
+    <h1>Special Requests</h1>
+    <ul ngControlGroup="specialRequest">
+      <li *ngFor="let item of specialRequestControls.controls; let i = index">
+        <input type="text" ngControl="{{i}}">
+        <button type="button" title="Remove Request" (click)="onRemoveSpecialRequest(i)">Remove</button>
+      </li>
+    </ul>
+    <button type="button" (click)="onAddSpecialRequest()">Add a Request</button>
+  </section>
+  <section>
+    <h1>Other Notes</h1>
+    <textarea ngControl="otherNotes"></textarea>
+  </section>
+  <button type="submit">Save Gamer Profile</button>
+  <button type="button" (click)="onClearForm()">Reset</button>
+</form>

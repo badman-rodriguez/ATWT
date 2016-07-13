@@ -1,62 +1,256 @@
 <!DOCTYPE html>
-<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
 <html lang="en-us">
 
 <head>
-<meta charset="utf-8">
-<title>Hello...</title>
-<style type="text/css">
-#mainContent {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: xx-large;
-	font-weight: bold;
-	background-color: #E3F0FB;
-	border-radius: 4px;
-	padding: 10px;
-	text-align: center;
-}
-.buttonStyle {
-	border-radius: 4px;
-	border: thin solid #F0E020;
-	padding: 5px;
-	background-color: #F8F094;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	font-weight: bold;
-	color: #663300;
-	width: 75px;
-}
-
-.buttonStyle:hover {
-	border: thin solid #FFCC00;
-	background-color: #FCF9D6;
-	color: #996633;
-	cursor: pointer;
-}
-.buttonStyle:active {
-	border: thin solid #99CC00;
-	background-color: #F5FFD2;
-	color: #669900;
-	cursor: pointer;
-}
-
-</style>
+    <meta charset="utf-8">
+    <title>Hello... Angular 2</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='css/global.css' rel='stylesheet' type='text/css'>
+  <!-- 1. Load libraries -->
+     <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
 </head>
-
 <body>
-<div id="mainContent">
-<p id="helloText">?</p>
-<button id="clickButton" class="buttonStyle">click me</button>
-</div>
-<script> 
-var myButton = document.getElementById("clickButton");
-var myText = document.getElementById("helloText");
-
-myButton.addEventListener('click', doSomething, false)
-
-function doSomething() {
-	myText.textContent = "hello, world!";
-}
-</script>
-
+    <header>
+        <ul>
+            <li>
+                <img src="images/logo.png" />
+                <br />
+                <h1>A Look at Angular 2.0</h1>
+                <hr />
+            </li>
+        </ul>
+    </header>
+    <div id="mainContent">
+        <h1> WHAT TO KNOW!!!</h1>
+        <ul>
+            <li>
+                <h3>What is different between 1 and 2? </h3><br />
+                <ul>
+                    <li>
+                        Angular 2 is component driven and follows the same look and feel of VueJS and ReactJS. <br />
+                        <ul>
+                            <ol>
+                                <li>
+                                    Component for Angular 1 is special directive, because technically there are no components in Angular 1. Since Angular 2 was launched, google made documentation on Components for Angular 1 in order to better help the upgrade process.
+                                    <br />
+                                    <br />
+                                </li>
+                                <li>
+                                    Angular 2 thought process: <br />
+                                    <img src="https://angular.io/resources/images/devguide/architecture/overview2.png" />
+                                    Source: <a href="https://angular.io/docs/ts/latest/guide/architecture.html">angular.io</a>
+                                </li>
+                            </ol>
+                        </ul>
+                    </li>
+                    
+                </ul> 
+                
+            </li>
+            <li>
+                <h3>What else is different:</h3> <br />
+                <a target="_blank" href="https://angular.io/docs/ts/latest/cookbook/a1-a2-quick-reference.html">
+                    https://angular.io/docs/ts/latest/cookbook/a1-a2-quick-reference.html
+                </a>
+            </li>
+            <li> 
+                <h3>Angular 2 source is recommended to be written with TypeScript......</h3>
+                So let's use it. <br />
+                
+                It can be used without TypeScript, but for this presentation we are using the
+                recommended set up.
+                <br />
+                <h3>What is TypeScript?</h3>
+                It is a superset of Javascript that compiles down to native JS. It supports ES6 syntax, which is nice, but i'm not too sure why google devs decided to go with it. <br />
+                <br />
+                A simple example is:
+                <pre>
+                    var name = “Susan”,
+                        age = 25,
+                        hasCode = true;
+                </pre>
+                IS NOW
+                <pre>
+                    let name: string = "Susan",
+                        age: number = 25,
+                        hasCode: boolean = true;
+                </pre>
+                
+                They are strongly typed now.  This is a small sample of what it does, if you everyone wants to know more visit: <Br />
+                <a target="_blank" href="http://www.typescriptlang.org/docs/tutorial.html">http://www.typescriptlang.org/docs/tutorial.html </a>
+            </li>
+        </ul>
+        
+        <hr />
+        
+        <h1> What is needed? and What to install?</h1>
+        <ul>
+            <li>
+                Check which version on Node. Make sure to have at least
+                <pre>
+                    node v5.x.x and npm 3.x.x
+                </pre>
+            </li>
+            <li> 
+               Like mentioned before, it uses Typescript<br />
+                
+               So we need to install it! <br />
+                
+                <pre>
+                    npm install typescript
+                </pre>
+                
+                Then create the typescript compiler and configuration files.
+                <br />
+                
+                <ul>
+                    <li>Compiler: <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html" target="_blank"> TypeScript Compiler Documentation</a></li>
+                    <li>Config with Typings: <a href="https://github.com/typings/typings" target="_blank"> Typings Repo</a></li>
+                </ul>
+            </li>
+            <li>
+                SystemJS <br />
+                <a target="_blank" href="https://github.com/systemjs/systemjs">https://github.com/systemjs/systemjs</a>
+                <br />
+                
+                A module loader: 
+                <pre>
+                    // loads './app.js' from the current directory
+                    SystemJS.import('./app.js').then(function(m) {
+                      console.log(m);
+                    });
+                </pre>
+                
+                New Angulars System JS recommendation:
+                <pre>
+    /**
+     * System configuration for Angular 2 samples
+     * Adjust as necessary for your application needs.
+     */
+    (function(global) {
+      // map tells the System loader where to look for things
+      var map = {
+        'app':                        'app', // 'dist',
+        '@angular':                   'node_modules/@angular',
+        'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
+        'rxjs':                       'node_modules/rxjs'
+      };
+      // packages tells the System loader how to load when no filename and/or no extension
+      var packages = {
+        'app':                        { main: 'main.js',  defaultExtension: 'js' },
+        'rxjs':                       { defaultExtension: 'js' },
+        'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
+      };
+      var ngPackageNames = [
+        'common',
+        'compiler',
+        'core',
+        'forms',
+        'http',
+        'platform-browser',
+        'platform-browser-dynamic',
+        'router',
+        'router-deprecated',
+        'upgrade',
+      ];
+      // Individual files (~300 requests):
+      function packIndex(pkgName) {
+        packages['@angular/'+pkgName] = { main: 'index.js', defaultExtension: 'js' };
+      }
+      // Bundled (~40 requests):
+      function packUmd(pkgName) {
+        packages['@angular/'+pkgName] = { main: '/bundles/' + pkgName + '.umd.js', defaultExtension: 'js' };
+      }
+      // Most environments should use UMD; some (Karma) need the individual index files
+      var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
+      // Add package entries for angular packages
+      ngPackageNames.forEach(setPackageConfig);
+      var config = {
+        map: map,
+        packages: packages
+      };
+      System.config(config);
+    })(this);
+                </pre>
+            </li>
+        </ul>
+        
+        <h1> Is it possible to see a couple of things built in Angular 2?</h1>
+        <ul>
+            <li>
+                Built with Angular: <br />
+                <a target="_blank" href="http://builtwithangular2.com/">http://builtwithangular2.com/</a>
+            </li>
+            <li>
+                Server Side Rendering: <br /> 
+                <a target="_blank" href="http://www.syntaxsuccess.com/viewarticle/server-side-rendering-in-angular-2.0">
+                    http://www.syntaxsuccess.com/viewarticle/server-side-rendering-in-angular-2.0
+                </a>
+            </li>
+            <li>
+                Sample Ticketing App with Angular 2 by Sitepoint <br />
+                <a target="_blank" href="https://www.sitepoint.com/angular-2-mockbackend/">
+                    https://www.sitepoint.com/angular-2-mockbackend/
+                </a>
+            </li>
+        </ul>
+        
+        <hr />
+        
+        <h1> More Information on Angular 2.0</h1>
+        <ul>
+            <li> http://www.angular2.com/ </li>
+            <li> angular.io </li>
+            <li> https://www.youtube.com/watch?v=vAb-2d1vcg8 </li>
+        </ul>
+        
+        <h1> Upgrading to 2.0 </h1>
+        <span> Here are your options </span>
+        <ul>
+            <li> Manually port it over.... but issues are.....
+                <ol>
+                    <li> It will involve a lot of refactoring or scrapping.... TIME IS MONEY</li>
+                    <li> Learning a new framework that isnt too similar to the previous angular. Old Expectations of Angular 1 wont work for 2</li>
+                </ol>
+                <p>
+                    Sounds bad, but most likely the better option. Better to go with the new, instead of waiting around
+                    for web app not to work at all because the framework being used is completely deprecated.
+                </p>
+            </li>
+            <li> 
+                <p>
+                    Use a magical tool called: The Upgrade Adapter... <br /> <br />
+                    WHAT IS THIS?!!! <br /> <br />
+                    
+                    Google Says: "The primary tool provided by the upgrade module is called the UpgradeAdapter. 
+                    This is a service that can bootstrap and manage hybrid applications that support both Angular 2 and Angular 1 code."
+                    <br />
+                    YAAAAASSSSS!!!!
+                </p>
+                <ol>
+                    <li>
+                        Upgrade Adapter Really just runs both versions of Ang 1 and Ang 2
+                    </li>
+                    <li>
+                        According to the Docs <br /> <br />
+                        
+                        " Every element in the DOM is owned by exactly one of the two frameworks. The other framework ignores it. If an element is owned by Angular 1, Angular 2 treats it as if it didn't exist, and vice versa. " <br />
+                        " The root of the application is always an Angular 1 template. "
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <my-app> ..... LOADING ......</my-app>
+    </div>
 </body>
 </html>
