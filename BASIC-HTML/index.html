@@ -5,11 +5,15 @@
 <head>
 <meta charset="utf-8">
     <title>Hello... BASIC HTML & CSS</title>
-    <style type="text/css">
-    </style>
+    <link href="./main.css" rel="stylesheet" />
+    <!-- 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js" type="text/javascript"> 
+    -->
 </head>
 
 <body>
+    <!-- 
     <div class="basic-tags-section">
         <h1> SOME BASIC HTML </h1>
         
@@ -20,10 +24,10 @@
         <h5>H5 tag</h5>
         <h6>H6 tag</h6>
         <p> PARAGRAPH</p>
-        <img src="" />
+        <img src="images/60989393.jpg" />
         <span>SPAN</span>
         <div>DIV</div>
-        <a href="#0"></a>
+        <a href="http://www.deadspin.com">A TAG aka a link</a>
         <ul>
             <li> LIST ITEM</li>
             <li> LIST ITEM</li>
@@ -41,12 +45,13 @@
             <dt>SECOND TERM</dt>
             <dd>SECOND DESCRIPTION</dd>
         </dl>
+        <br />
         <table>
             <thead>
-                <th>
-                    <td>head column</td>
-                    <td>head column 2</td>
-                </th>
+                <tr>
+                    <th>head column</th>
+                    <th>head column 2</th>
+                </tr>
             </thead>
             <tbody>
                 <tr>
@@ -90,7 +95,7 @@
         <article> ARTICLE </article>
         <aside> ASIDE </aside>
         <nav> NAVIGATION </nav>
-        <canvas> CANVAS </canvas>
+        <canvas class="color: blue"> CANVAS </canvas>
         <time>1:00</time>
         <progress value="70" max="100" ></progress>
         <mark>MARK</mark>
@@ -112,8 +117,73 @@
             <source src="video.mp4" type="video/mp4">
             <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
         </video>
+    </div> -->
+    <div class="adding-styles">
+        <h1 class="custom-h1">H1 tag</h1>
+        <h2 class="custom-h2">H2 tag</h2>
+        <header class="top">
+            <img src="http://placehold.it/1200x350" />
+            <nav id="navigation">
+                <a href="#woot"> Woot </a>
+                <a href="#about"> About </a>
+                <a href="#things"> Things </a>
+                <a href="#donate"> And Such </a>
+            </nav>
+        </header>
+
+        <article class="content">
+            <p>
+                90's keytar shabby chic williamsburg, retro brunch ramps. Hoodie crucifix listicle cardigan 
+                umami, hashtag occupy. Four loko cardigan paleo beard. Banjo mlkshk truffaut, kitsch polaroid 
+                green juice selvage farm-to-table tote bag paleo neutra chartreuse. Polaroid fingerstache brooklyn
+                , readymade affogato trust fund cred forage. Bushwick health goth 3 wolf moon pop-up,
+                 pickled sartorial locavore fap master cleanse viral cronut cardigan. Pork belly XOXO
+                kitsch whatever before they sold out, try-hard four loko slow-carb deep v.
+            </p>
+
+            <p>
+                Kale chips deep v ennui, offal venmo bitters fashion axe semiotics neutra.
+                 Godard paleo craft beer shabby chic twee, taxidermy pour-over offal church-key pitchfork 
+                 portland tousled +1 echo park waistcoat. Messenger bag keytar austin, disrupt deep v stumptown 
+                 tattooed street art brunch scenester chillwave mustache squid pour-over semiotics. Art party 
+                 brooklyn godard, fixie lo-fi tofu scenester hammock helvetica fashion axe. Raw denim kitsch 
+                 selvage, keytar tousled sriracha everyday carry shabby chic. Street art dreamcatcher vegan, 
+                 lo-fi helvetica artisan small batch master cleanse marfa pickled squid YOLO listicle asymmetrical.
+                  Sustainable bespoke slow-carb crucifix pitchfork, ramps meditation occupy organic chambray 
+                  whatever irony food truck cliche.
+            </p>
+        </article>
+        <aside class="side-content">
+            <ul>
+                <li>
+                    <h3 class="custom-h3">
+                        Related Item
+                    </h3>
+                    <a href="#seemore"> See more </a>
+                </li>
+                <li>
+                    <h3 class="custom-h3">
+                        Related Item 2
+                    </h3>
+                    <a href="#seemore"> See more </a>
+                </li>
+                <li>
+                    <h3 class="custom-h3">
+                        Related Item 3
+                    </h3>
+                    <a href="#seemore"> See more </a>
+                </li>
+                <li>
+                    <h3 class="custom-h3">
+                        Related Item 4
+                    </h3>
+                    <a href="#seemore"> See more </a>
+                </li>
+            </ul>
+        </aside>
+        <footer class="footer-content">
+            
+        </footer>
     </div>
-    <script> 
-    </script>
 </body>
 </html>
