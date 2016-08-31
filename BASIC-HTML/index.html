@@ -6,14 +6,13 @@
 <meta charset="utf-8">
     <title>Hello... BASIC HTML & CSS</title>
     <link href="./main.css" rel="stylesheet" />
-    <!-- 
+    
         <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js" type="text/javascript"> 
-    -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js" type="text/javascript">  </script>
 </head>
 
 <body>
-    <!-- 
+   <!--
     <div class="basic-tags-section">
         <h1> SOME BASIC HTML </h1>
         
@@ -90,15 +89,15 @@
         </fieldset>
     </div>
     <div class="html-5-tags-section">
-        <h1>SOME HTML 5 TAGS </h1>
-        <header>HEADER</header>
-        <article> ARTICLE </article>
-        <aside> ASIDE </aside>
-        <nav> NAVIGATION </nav>
-        <canvas class="color: blue"> CANVAS </canvas>
-        <time>1:00</time>
-        <progress value="70" max="100" ></progress>
-        <mark>MARK</mark>
+        <h1>SOME HTML 5 TAGS </h1> 
+        <header>HEADER</header> <br /><br />
+        <article> ARTICLE </article> <br /><br />
+        <aside> ASIDE </aside> <br /><br />
+        <nav> NAVIGATION </nav> <br /><br />
+        <canvas id="canvas-things"> CANVAS </canvas> <br /><br />
+        <time>1:00</time> <br /><br />
+        <progress value="70" max="100" ></progress> <br /> <br />
+        <mark>MARK</mark> <br /><br />
         <input list="browsers">
 
         <datalist id="browsers">
@@ -109,15 +108,53 @@
             <option value="Safari">
         </datalist>
 
+        <br /><br />
+
         <audio controls>
-            <source src="audio.mp3" type="audio/mpeg">
+            <source src="media/3720.mp3" type="audio/mpeg">
             Your browser does not support the audio tag.
         </audio>
         <video controls>
-            <source src="video.mp4" type="video/mp4">
+            <source src="media/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
             <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
         </video>
-    </div> -->
+    </div>
+    <div class="css-basics">
+        <h1>
+            CSS BASICS
+        </h1>
+        <ul>
+            <li>
+                Classes - Can be repeated
+                <pre>
+                    .class-name{}
+                </pre>
+                <pre>
+                    p class="class-name"
+                </pre>
+            </li>
+            <li>
+                IDs - Can't be repeated, will work but it's invalid HTML to have multiple IDs with the same name.
+                <pre>
+                    #id-name{}
+                </pre>
+                <pre>
+                    p id="id-name"
+                </pre>
+            </li>
+            <li>
+                CSS Properties:
+                <pre>
+                    #id-name, .class-name {
+                        property-name: value;
+                    }
+                </pre>
+
+                Take a look at properties:
+                <a href="http://www.w3schools.com/cssref/"> CSS Properties </a>
+            </li>
+        </ul>
+    </div>
     <div class="adding-styles">
         <h1 class="custom-h1">H1 tag</h1>
         <h2 class="custom-h2">H2 tag</h2>
@@ -182,8 +219,35 @@
             </ul>
         </aside>
         <footer class="footer-content">
-            
+            footer
         </footer>
+    </div> -->
+
+    <h1>
+        USING A FRAMEWORK: ZURB Foundation
+    </h1>
+
+    <button class="button"> Foundation Button </button>
+    <button class="secondary button"> Foundation Button </button>
+
+    <div class="success callout">
+        <p> YAAAAAAAAAY </p>
     </div>
+    <div class="alert callout">
+        <p> SOMETHING BROKE ON YOUR COMPUTER </p>
+    </div>
+
+    <div class="row align-stretch">
+        <div class="large-4 columns"> Column </div>
+        <div class="large-4 columns"> Column </div>
+        <div class="large-4 columns"> Column </div>
+    </div>
+
+    <script>
+        var canvas = document.getElementById("canvas-things");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#eeee00";
+        ctx.fillRect(0, 0, 80, 80);
+    </script>
 </body>
 </html>
