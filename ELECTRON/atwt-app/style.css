@@ -1,0 +1,40 @@
+#reddit-button {
+    border: none;
+    border-radius: 0;
+    background: #26a69a;
+    color: #fff;
+    font-size: 18px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 100%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 16px;
+}
+
+#reddit-random-board {
+    padding: 16px;
+}
+
+#reddit-random-board p {
+    background: lightgray;
+    height: 150px;
+    width: 215px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin: 1vw;
+    box-shadow: 1px 4px 5px lightblue;
+    padding: 16px 4px;
+}
+
+#reddit-random-board a {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#reddit-random-board img {
+    width: 50%;
+}
+
