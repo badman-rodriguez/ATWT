@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 10px 40px;
+}
+
+#buttons {
+    padding-left: 500px;
+}
+.hover-button {
+    display: block;
+    background: cornflowerblue;
+    width: 300px;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hover-button:hover {
+    display: block;
+    background: darkred;
+    width: 400px;
+    text-align: center;
+    color: white;
+        transition: all 3s ease;
+}
+
+/*
+    transition: <property> <duration> <timing-function> <delay>;
+
+    timing function:
+    ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+    linear - specifies a transition effect with the same speed from start to end
+    ease-in - specifies a transition effect with a slow start
+    ease-out - specifies a transition effect with a slow end
+    ease-in-out - specifies a transition effect with a slow start and end
+    cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
+    https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves
+*/
+
+
+.menu {
+    margin: 15px 0;
+    padding: 15px 0;
+}
+.menu-button, 
+.menu-button:before, 
+.menu-button:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: black;
+    position: absolute;
+    display: block;
+    content: '';
+}
+.menu-button:before {
+    top: -10px; 
+}
+.menu-button:after {
+    bottom: -10px;
+}
+
+.menu-button, 
+.menu-button:before, 
+.menu-button:after {
+    transition: all 500ms ease-in-out;
+}
+.menu-button.active {
+    background-color: transparent;
+}
+.menu-button.active {
+    top: 0;
+}
+.menu-button.active:before {
+    transform: rotate(45deg);
+    top: 10px; 
+}
+.menu-button.active:after {
+    transform: rotate(-45deg);
+}
+
+.expanding-button {
+    width: 200px;
+    background: deepskyblue;
+    padding: 10px;
+    display: block;
+}
+
+.expanding-button:hover {
+    width: 100%;
+    background: darkorange;
+    transition: all 10s ease;
+}
+
+.accordion-menu li {
+    list-style: none;
+    border: 1px solid black;
+    padding: 10px 10px 20px;
+    display: block
+}
+
+.accordion-menu li a {
+    display: block;
+    height:10px;
+    transition: all 3s ease;
+}
+
+.accordion-menu li a.active {
+    height: 200px;
+    transition: all 3s ease;
+}
+
+.slide-out-container {
+    overflow: hidden;
+}
+.slide-out-container p {
+    position: relative;
+    width: 500px;
+    left: -750px;
+    transition: all 1s ease;
+}
+
+.slide-out-container p.active {
+    left: 15px;
+    transition: all 1s ease;
+}

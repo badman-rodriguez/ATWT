@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Fun with CSS Animations</title>
+    <link href="./css-things-again.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section id="buttons">
+        <!-- Buttons animations -->
+        <h1> Button animations </h1>
+        <a href="#0" class="hover-button"> Hover Button </a>
+        <div class="menu" style="position: relative">
+        <a id="button" href="#0" class="menu-button"></a>
+        </div>
+        <a href="#0" class="expanding-button"> Expanding Button </a>
+    </section>
+
+    <section id="more-complex">
+        <!-- Accordion Menu -->
+        <h1> Show and Hide animations </h1>
+        
+        <ul class="accordion-menu">
+            <li> <a href="#0" class="accordion-button"> Item #1 </a> </li>
+            <li> <a href="#0" class="accordion-button"> Item #1 </a> </li>
+        </ul>
+
+        <div class="slide-out-container">
+            <a href="#0" class="show-things"> Show things </a>
+            <p class="class">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget 
+                ex vitae nulla maximus volutpat vitae in justo. Cum sociis natoque penatibus
+                et magnis dis parturient montes, nascetur ridiculus mus. Morbi tempus ut 
+                odio ut gravida. Sed lobortis luctus pellentesque. Mauris volutpat lectus 
+                nec diam commodo, malesuada tristique ante egestas. Aenean sollicitudin
+                aliquam justo a dictum. Donec at tellus venenatis, vehicula nibh vitae, 
+                pretium nisl.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget 
+                ex vitae nulla maximus volutpat vitae in justo. Cum sociis natoque penatibus
+                et magnis dis parturient montes, nascetur ridiculus mus. Morbi tempus ut 
+                odio ut gravida. Sed lobortis luctus pellentesque. Mauris volutpat lectus 
+                nec diam commodo, malesuada tristique ante egestas. Aenean sollicitudin
+                aliquam justo a dictum. Donec at tellus venenatis, vehicula nibh vitae, 
+                pretium nisl.
+            </p>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <script>
+        $('#button').on('click', function(e){
+            $(this).toggleClass('active');
+        });
+
+        $('.accordion-button').on('click', function(e){
+            $(this).toggleClass('active');
+        });
+
+        $('.show-things').on('click', function(e){
+            $('.slide-out-container p').toggleClass('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+/*
+    Square circle and color change
+*/
+.first-animation {
+  height: 250px;
+  width: 250px;
+  margin: 100px auto;
+  background-color: cornflowerblue;
+
+
+
+
+
+  animation-name: coolchange;
+  animation-duration: 3s; 
+  animation-timing-function: ease-out; 
+  /* 
+    animation-timing-function: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;
+  */
+  animation-delay: 0;
+  /*
+   animation-direction: normal|reverse|alternate|alternate-reverse|initial|inherit;
+  */
+  animation-direction: alternate;
+  /* 
+    The animation-direction property defines whether an animation should play in reverse direction or in alternate cycles.
+    animation-direction: normal|reverse|alternate|alternate-reverse|initial|inherit; 
+  */
+  animation-iteration-count: infinite;
+  /* The animation-iteration-count property specifies the number of times an animation should be played. */
+  animation-play-state: running;
+  animation-fill-mode: none;
+}
+ 
+@keyframes coolchange {
+  0% {
+    transform: scale(.3);
+    background-color: cornflowerblue;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: gray;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: black;
+  }
+}
+
+/*
+    Square circle and color change
+*/
+
+
+/*
+    Spinning
+*/
+.second-animation {
+  height: 250px;
+  width: 250px;
+  border-radius: 20%;
+  margin: 50px auto;
+  background-color: palevioletred;
+  animation-name: spinthatwheel;
+  animation-duration: 3s; 
+  animation-timing-function: linear; 
+  animation-delay: 0;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-fill-mode: none;
+}
+
+@keyframes spinthatwheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(200deg);
+  }
+  75% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*
+  Sound bars
+*/
+
+#more-complex {
+  position: relative;
+   width: 100%;
+  height: 0;
+  padding-top: 100%;
+  overflow: hidden;
+}
+div.third-animation {
+  margin-top: -17%;
+  height: 34%; 
+  width: 50px;
+  top: 30%;
+  position: absolute;
+}
+/*
+   inline short-hand animation usage
+   animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+*/
+div.third-animation:nth-of-type(1)  { animation: wave 17s   0.000s linear infinite; }
+div.third-animation:nth-of-type(2)  { animation: wave 17s -16.227s linear infinite; }
+div.third-animation:nth-of-type(3)  { animation: wave 17s -15.455s linear infinite; }
+div.third-animation:nth-of-type(4)  { animation: wave 17s -14.682s linear infinite; }
+div.third-animation:nth-of-type(5)  { animation: wave 17s -13.909s linear infinite; }
+div.third-animation:nth-of-type(6)  { animation: wave 17s -13.136s linear infinite; }
+div.third-animation:nth-of-type(7)  { animation: wave 17s -12.364s linear infinite; }
+div.third-animation:nth-of-type(8)  { animation: wave 17s -11.591s linear infinite; }
+div.third-animation:nth-of-type(9)  { animation: wave 17s -10.818s linear infinite; }
+div.third-animation:nth-of-type(10) { animation: wave 17s -10.045s linear infinite; }
+div.third-animation:nth-of-type(11) { animation: wave 17s  -9.273s linear infinite; }
+div.third-animation:nth-of-type(12) { animation: wave 17s  -8.500s linear infinite; }
+div.third-animation:nth-of-type(13) { animation: wave 17s  -7.727s linear infinite; }
+div.third-animation:nth-of-type(14) { animation: wave 17s  -6.955s linear infinite; }
+div.third-animation:nth-of-type(15) { animation: wave 17s  -6.182s linear infinite; }
+div.third-animation:nth-of-type(16) { animation: wave 17s  -5.409s linear infinite; }
+div.third-animation:nth-of-type(17) { animation: wave 17s  -4.636s linear infinite; }
+div.third-animation:nth-of-type(18) { animation: wave 17s  -3.864s linear infinite; }
+div.third-animation:nth-of-type(19) { animation: wave 17s  -3.091s linear infinite; }
+div.third-animation:nth-of-type(20) { animation: wave 17s  -2.318s linear infinite; }
+div.third-animation:nth-of-type(21) { animation: wave 17s  -1.545s linear infinite; }
+div.third-animation:nth-of-type(22) { animation: wave 17s  -0.773s linear infinite; }
+div.third-animation:nth-of-type(22) { animation: wave 17s  -0.773s linear infinite; }
+
+
+@keyframes wave {
+    0% { 
+      left:-2%; 
+      background: limegreen; 
+    }
+    5% { 
+        background: skyblue; 
+    }
+    10%  { 
+        height:10%; 
+        margin-top: -5%; 
+        background: dodgerblue; 
+    }
+    15%  { 
+        background: turquoise; 
+    }
+    20%  { 
+        height:34%; 
+        margin-top:-17%; 
+        background: olive; 
+    }
+    25%  { 
+        background: tomato; 
+    }
+    30%  { 
+        height:10%; 
+        margin-top: -5%; 
+        background: darkturquoise; 
+    }
+    35%  { 
+        background: azure; 
+    }
+    40%  { 
+        height:34%; 
+        margin-top:-17%; 
+        background: steelblue; 
+    }
+    45%  { 
+        background: yellowgreen; 
+    }
+    50%  { 
+        height:10%; 
+        margin-top: -5%; 
+        background: khaki; 
+    }
+    55%  { 
+        background:  purple; 
+    }
+    60%  { 
+        height:34%; 
+        margin-top:-17%; 
+        background: goldenrod; 
+    }
+    65%  { 
+        background: darksalmon; 
+    }
+    70%  { 
+        height:10%; 
+        margin-top: -5%; 
+        background: slateblue; 
+    }
+    75%  { 
+        background: #4DF3A9; 
+    }
+    80%  { 
+        height:34%; 
+        margin-top:-17%; 
+        background: deepskyblue; 
+    }
+    85%  { 
+        background: mintcream; 
+    }
+    90%  { 
+        height:10%; 
+        margin-top: -5%; 
+        background: mediumpurple; 
+    }
+    95%  { 
+        background:  navajowhite; 
+    }
+    100% { 
+        height:34%; 
+        margin-top:-17%; 
+        left:100%; 
+        background: thistle; 
+    }
+}
+
+
+/*
+div { width:100px; height:100px; margin-top:180px; transform-origin:200% center; position:relative; animation:rotate 3s linear infinite; }
+div:before { content:''; position:absolute; height:100%; width:100%; background:blue; animation:rotate 3s linear reverse infinite; }
+@keyframes rotate { 100% { transform:rotate(-360deg); } }
+
+body { background:rgb(20,20,20); }*/
