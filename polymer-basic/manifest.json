@@ -1,0 +1,7 @@
+{
+  "name": "polymer-basic",
+  "short_name": "polymer-basic",
+  "description": "Lecture Application",
+  "start_url": "/",
+  "display": "standalone"
+}
