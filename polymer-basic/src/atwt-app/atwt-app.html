@@ -1,5 +1,10 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<!-- 
+<link rel="import" href="atwt-text-field.html">
+<link rel="import" href="atwt-text-area.html">
+<!--
+   <link rel="import" href="atwt-repeater.html">-->
+<!--
+    
   This import is to actually use the polymer function.
   If it's removed, it will definitely not work.'
 -->
@@ -23,7 +28,7 @@
         background: lightgray;
       }
     </style>
-    <h2 class="class-name-thing">ATWT [[prop1]]</h2>
+    <h2 class="class-name-thing">ATWT </h2>
     <p>
       VHS farm-to-table before they sold out chambray neutra stumptown. Godard cred iPhone roof party, asymmetrical green juice cornhole. 
       Asymmetrical cray health goth locavore. Cronut tumblr cred, austin chartreuse snackwave hell of direct trade yuccie raw denim ugh. 
@@ -32,16 +37,55 @@
       Enamel pin irony plaid, tacos salvia lyft venmo mixtape chartreuse next level single-origin coffee. Synth messenger bag woke truffaut, 
       freegan pork belly kickstarter single-origin coffee. Asymmetrical actually swag small batch, yr chia activated charcoal fanny pack lyft.
     </p>
+    <div>
+       <!-- {{ value_inputs.first }} -->
+      <button on-tap="addUser">Add User</button> <button on-tap="removeUser">Remove User</button>
+      <atwt-text-field value_inputs="{{value_inputs}}" id_text="fname-id" ></atwt-text-field>
+      <atwt-text-area id="things" text_label="Message" placeholder_text="Large paragraph of glory" value_message="{{value_inputs.message}}" id_text="message-id" ></atwt-textarea-field>
+    </div>
+    <div>
+      <h1>List of Users</h1>
+      <template is="dom-repeat" items="{{users}}">
+        <div># <span>{{index}}</span></div>
+        <div>First name: <span>{{item.first}}</span></div>
+        <div>Last name: <span>{{item.last}}</span></div>
+        <div>Email: <span>{{item.email}}</span></div>
+        <div>Message: <span>{{item.message}}</span></div>
+      </template>
+    </div>
   </template>
 
   <script>
     Polymer({
       is: 'atwt-app',
       properties: {
-        prop1: {
+        prop_thing: {
           type: String,
-          value: 'Form app',
+          value: 'Form app'          
         },
+        value_inputs: {
+            type:Object,
+            value: function(){
+              return {
+                first: '',
+                last: '',
+                email: '',
+                message: ''
+              }
+            }
+        },
+        users: {
+          type: Array,
+          value: []
+        }
+      },
+      ready: function() {
+      },
+      addUser: function() {
+        this.push('users', this.value_inputs);
+      },
+      removeUser: function() {
+        this.splice('users', 0, 1);
       }
     });
   </script>

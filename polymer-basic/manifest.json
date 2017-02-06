@@ -1,6 +1,6 @@
 {
-  "name": "polymer-basic",
-  "short_name": "polymer-basic",
+  "name": "ATWT: Polymer Project",
+  "short_name": "polymer-project",
   "description": "Lecture Application",
   "start_url": "/",
   "display": "standalone"

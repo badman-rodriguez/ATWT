@@ -1,0 +1,62 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<!-- 
+  This import is to actually use the polymer function.
+  If it's removed, it will definitely not work.'
+-->
+<dom-module id="atwt-text-field">
+    <style>
+      :host {
+        text-align: left;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+      }
+
+      /*
+        follow traditional css for doing custom things on select elements
+      */
+      .class-name-thing {
+        background: lightgray;
+      }
+      input {
+          border-left: none;
+          border-top: none;
+          border-right: none;
+          display: block;
+          border-bottom: 2px solid deepskyblue;
+          padding: 5px;
+          font-size: 16px;
+          margin-top: 10px;
+          width: 100%;
+      }
+    </style>
+  <template>
+    <div class="input-field">
+          <input placeholder="" id="" type="text" value="{{value_inputs.first::input}}" class="validate">
+          <label for=""> First</label>
+    </div>
+    <div class="input-field">
+          <input placeholder="" id="" type="text" value="{{value_inputs.last::input}}" class="validate">
+          <label for=""> Last</label>
+    </div>
+    <div class="input-field">
+          <input placeholder="" id="" type="text" value="{{value_inputs.email::input}}" class="validate">
+          <label for="">Email </label>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'atwt-text-field',
+      properties: {
+        value_inputs: {
+            type:Object,
+            notify: true,
+            readOnly: false
+        },
+      },
+      ready: function() {
+          
+      }
+    });
+  </script>
+</dom-module>

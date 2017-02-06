@@ -1,0 +1,90 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<!-- 
+  This import is to actually use the polymer function.
+  If it's removed, it will definitely not work.'
+-->
+<dom-module id="atwt-text-area">
+    <style>
+      :host {
+        text-align: left;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+      }
+
+      /*
+        follow traditional css for doing custom things on select elements
+      */
+      .class-name-thing {
+        background: lightgray;
+      }
+      textarea {
+          border-top: none;
+          border-right: none;
+          display: block;
+          border-left: 2px solid deepskyblue;
+          border-bottom: 2px solid deepskyblue;
+          padding: 5px 10px;
+          font-size: 16px;
+          width: 100%;
+      }
+      label {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        display: block
+      }
+    </style>
+  <template>
+    <div id="id" class="text-area-field">
+          <label for="{{id}}">{{ text_label }}</label>
+          <textarea placeholder="{{placeholder_text}}" id="{{id_text}}" value="{{value_message::input}}"></textarea>
+    </div>
+ <!-- {{ value_message}} -->
+  </template>
+  <script>
+    Polymer({
+      is: 'atwt-text-area',
+      properties: {
+        text_label: String,
+        placeholder_text: String,
+        id_text: String,
+        value_message: {
+          type: String,
+          notify: true,
+          readOnly: false
+        }
+
+        /*
+        Configuration----------------	Result
+        notify: false,            One-way, downward
+        readOnly: false
+
+        notify: false,            No data flow
+        readOnly: true
+        
+        notify: true,             Two-way
+        readOnly: false
+
+        notify: true,             One-way, upward
+        readOnly: true
+        
+        */
+      },
+      created: function() {
+        console.log('This was created');
+      },
+
+      ready: function() {
+        console.log('This has local DOM initialized' + this.text_label);
+
+      },
+      attached: function() {
+        console.log('This was attached');
+      },
+
+      detached: function() {
+        console.log('This was detached');
+      }
+
+    });
+  </script>
+</dom-module>
