@@ -1,0 +1,28 @@
+<div class="container-fluid">
+	<header>
+        {{#if data.page.image}}<img src="{{{cloudinaryUrl data.page.image  }}}">{{/if}}
+        <h2>{{ data.page.title }}</h2>
+	</header>
+    <section class="row">
+        <div class="col-xs-8">
+            <h3>Content Brief </h3>
+            {{{ data.page.content.brief }}}
+            <h3>Content Extended </h3>
+            {{{ data.page.content.extended }}}
+        </div>
+        <div class="col-xs-4">
+            <h2> Sidebar of Fun </h2>
+            <ul>
+                <li>
+                    List
+                </li>
+                <li>
+                    of 
+                </li>
+                <li>
+                    things
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>

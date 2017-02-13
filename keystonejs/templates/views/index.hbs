@@ -1,0 +1,69 @@
+{{!< default}}
+<div class="container-fluid">
+	<div><img src="/images/logo.svg" width="160">
+		<h1>ATWT Custom Keystone Site:</h1>
+		<section class="row">
+			<h2> How to customize Keystone: </h2>
+			<ul class="col-12">
+				<li>
+					<h3>Keystone Templates for Views</h3>
+					<a href="http://keystonejs.com/docs/getting-started/#routesviews-templates" target="_blank"> Template Information </a> <br />
+					Keystone JS uses jade as a default, but any express complaint templating/framework can be used. For the list of templating engines
+					go here: <a href="https://github.com/expressjs/express/wiki?_ga=1.249697413.2031156389.1484835995#template-engines" target="_blank"> Express Template Engines</a>
+					<br />
+					<div class="alert alert-info">
+						<strong>Note:</strong> ended up using handlebars for this presentation.
+					</div>
+				</li>
+				<li>
+					<h3> Setting up your Data Models: </h3>
+					<div class="alert alert-success" role="alert">
+						<strong>Keystone says:</strong> In KeystoneJS, your data schema and models are controlled by Lists, and documents in your database are often called Items.
+					</div>
+
+					To declare your model, a new list is created and then you pass it some options. For information on what these options are, click <a href="http://keystonejs.com/docs/database/#lists-options" target="_blank"> here </a>
+				</li>
+				<li>
+					<h3> Create your fields </h3>
+					Keystone offers the standard fields which CMS tools normally have which are:
+					<ul>
+						<li>
+							Text Fields, Textarea Fields, Rich Text Fields, 
+
+						</li>
+						<li>
+							Image, but they push for <a href="http://cloudinary.com/" target="_blank">Cloudinary</a> 
+						</li>
+					</ul>
+					and so on, but! they do offer unique fields like location using google maps integration, money fields to handle currency, 
+					and relationship fields which are fields that are dependent on another field in order to be shown and be filled.
+				</li>
+			</ul>
+			<div class="alert alert-info">
+				<strong>Note:</strong> This index was mostly hardcoded. The reason is to show that it is possible to include
+				static pages with any type of functionality.
+			</div>
+		</section>
+		
+		<section class="row">
+			<h2> Site examples using Keystone: </h2>
+
+			<a class="col-12" href="http://www.suitshop.com.au/">
+				<img style="width:80%" src="/images/example-1.PNG" /></a>
+			</a>
+			<a class="col-12" href="https://www.bodymindlife.com/">
+				<img style="width:80%" src="/images/example-2.PNG" /></a>
+			</a>
+		</section>
+
+		<section class="row">
+			<h2> Site examples using Keystone: </h2>
+
+			<div class="alert alert-info">
+				<strong>For more information:</strong> Refer to the documentation page and being at the <a href="http://keystonejs.com/docs/getting-started/" target="_blank"> getting started </a> area of Keystone's website.
+			</div>
+		</section>
+	</div>
+</div>
+
+
