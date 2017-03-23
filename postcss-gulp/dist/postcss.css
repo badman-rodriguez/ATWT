@@ -1,0 +1,71 @@
+/* Custom Media queries */ 
+
+a {
+    color: #f47742;
+}
+
+body {
+    font-size: 28px;
+}
+
+ul {
+    padding: 16px;
+    font-size: 12px;
+}
+
+@media (max-width: 500px) {
+    p {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 900px) {
+    img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    div {
+        margin: 15px;
+    }
+}
+
+/*------------------------------------------------
+- Font Magician
+--------------------------------------------------*/
+
+p {
+    font-family: "Roboto";
+}
+
+/*------------------------------------------------
+- Post Css Neat
+--------------------------------------------------*/
+
+.container {
+    max-width: 64em;
+    margin-left: auto;
+    margin-right: auto;
+    *zoom: 1;
+}
+
+.container:before, .container:after {
+    content: " ";
+    display: table;
+}
+
+.container:after {
+    clear: both;
+}
+
+div {
+    display: block;
+    float: left;
+    margin-right: 2.35765160%;
+    width: 48.82117420%;
+}
+
+div:last-child {
+    margin-right: 0;
+}

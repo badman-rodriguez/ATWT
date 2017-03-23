@@ -1,0 +1,67 @@
+/* Custom Media queries */
+@custom-media --small-viewport (max-width: 500px);
+@custom-media --medium-viewport (max-width: 900px);
+@custom-media --large-viewport (max-width: 1200px);
+
+@custom-selector :--button button, .button;
+@custom-selector :--enter :hover, :focus;
+
+:root {
+  --mainColor: #f47742;
+  --mainFont: 14px;
+
+  --list-styles: {
+    padding: 16px;
+    font-size: 12px;
+  };
+} 
+
+a {
+    color: var(--mainColor);
+}
+
+body {
+    font-size:calc(var(--mainFont) * 2);
+}
+
+ul {
+    @apply --list-styles;
+}
+
+@media (--small-viewport) {
+    p {
+        padding: 5px;
+    }
+}
+
+@media (--medium-viewport) {
+    img {
+        width: 100%;
+    }
+}
+
+@media (--large-viewport) {
+    div {
+        margin: 15px;
+    }
+}
+
+/*------------------------------------------------
+- Font Magician
+--------------------------------------------------*/
+
+p {
+    font-family: "Roboto";
+}
+
+/*------------------------------------------------
+- Post Css Neat
+--------------------------------------------------*/
+
+.container {
+    @neat-outer-container;
+}
+
+div {
+    @neat-span-columns 6;
+}

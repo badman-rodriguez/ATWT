@@ -1,0 +1,40 @@
+.classname-one {
+  padding: 1em;
+  margin: 1em;
+  background: #eee;
+}
+
+.classname-one .classname-two{
+  font-size: 14px;
+}
+
+/*------------------------------------------------
+- Post Css Neat
+--------------------------------------------------*/
+
+.container {
+    max-width: 64em;
+    margin-left: auto;
+    margin-right: auto;
+    *zoom: 1;
+}
+
+.container:before, .container:after {
+  content: " ";
+  display: table;
+}
+
+.container:after {
+  clear: both;
+}
+
+div {
+    display: block;
+    float: left;
+    margin-right: 2.35765160%;
+    width: 48.82117420%;
+}
+
+div:last-child {
+  margin-right: 0;
+}
