@@ -1,0 +1,32 @@
+﻿/*
+    SASS variables
+*/
+$food-movie-black: #000;
+$food-movie-green: #52BE80;
+$food-movie-gray: #808080;
+$food-movie-blue: #22c0e7;
+
+#hero {
+    > img {
+        width: 100%;
+    }
+}
+
+.search-section {
+    .form-control {
+        width: 100%;
+    }
+}
+
+.search-results {
+    #recipe-list {
+        > ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-between;
+        }
+    }
+}

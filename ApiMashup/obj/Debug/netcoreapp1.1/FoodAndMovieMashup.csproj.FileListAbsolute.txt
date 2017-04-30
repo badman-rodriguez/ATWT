@@ -1,0 +1,9 @@
+C:\Users\brian\Documents\TrunkClubProject\FoodAndMovieMashup\FoodAndMovieMashup\bin\Debug\netcoreapp1.1\FoodAndMovieMashup.deps.json
+C:\Users\brian\Documents\TrunkClubProject\FoodAndMovieMashup\FoodAndMovieMashup\bin\Debug\netcoreapp1.1\FoodAndMovieMashup.runtimeconfig.json
+C:\Users\brian\Documents\TrunkClubProject\FoodAndMovieMashup\FoodAndMovieMashup\bin\Debug\netcoreapp1.1\FoodAndMovieMashup.runtimeconfig.dev.json
+C:\Users\brian\Documents\TrunkClubProject\FoodAndMovieMashup\FoodAndMovieMashup\bin\Debug\netcoreapp1.1\FoodAndMovieMashup.dll
+C:\Users\brian\Documents\TrunkClubProject\FoodAndMovieMashup\FoodAndMovieMashup\bin\Debug\netcoreapp1.1\FoodAndMovieMashup.pdb
+C:\Users\brian\Documents\TrunkClubProject\FoodAndMovieMashup\FoodAndMovieMashup\obj\Debug\netcoreapp1.1\FoodAndMovieMashup.csprojResolveAssemblyReference.cache
+C:\Users\brian\Documents\TrunkClubProject\FoodAndMovieMashup\FoodAndMovieMashup\obj\Debug\netcoreapp1.1\FoodAndMovieMashup.AssemblyInfo.cs
+C:\Users\brian\Documents\TrunkClubProject\FoodAndMovieMashup\FoodAndMovieMashup\obj\Debug\netcoreapp1.1\FoodAndMovieMashup.dll
+C:\Users\brian\Documents\TrunkClubProject\FoodAndMovieMashup\FoodAndMovieMashup\obj\Debug\netcoreapp1.1\FoodAndMovieMashup.pdb
