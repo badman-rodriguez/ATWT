@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using MySQL.Data.EntityFrameworkCore.Extensions;
+using FoodAndMovieMashup.Data;
+using FoodAndMovieMashup.Models;
 
 namespace FoodAndMovieMashup
 {
@@ -28,11 +32,18 @@ namespace FoodAndMovieMashup
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.AddDbContext<UserProfileContext>(options =>
+                options.UseMySQL(Configuration.GetConnectionString("DBConnection")));
+
+            services.AddDbContext<UserProfileContext>(opt => opt.UseInMemoryDatabase());
+
             services.AddMvc();
+
+            services.AddScoped<IUserRepo, UserApi>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, UserProfileContext context)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
@@ -49,12 +60,37 @@ namespace FoodAndMovieMashup
 
             app.UseStaticFiles();
 
+            /*
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapRoute("somename", "sname/{*action}",
+                    defaults: new { controller = "SomeName", action = "Action" });
             });
+                {*action} = catch all
+             */
+
+            // This only runs default route
+            app.UseMvcWithDefaultRoute();
+
+            /*
+             * UseMvc does not directly define any routes, it adds a placeholder 
+             * to the route collection for the attribute route. 
+             * The overload UseMvc(Action<IRouteBuilder>) lets you add your own 
+             * routes and also supports attribute routing.
+             * 
+             * UseMvc and all of its variations adds a placeholder for the attribute route - 
+             * attribute routing is always available regardless of how you 
+             * configure UseMvc. UseMvcWithDefaultRoute defines a default 
+             * route and supports attribute routing. 
+             * */
+
+
+
+            DbInitializer.Initialize(context);
         }
     }
 }

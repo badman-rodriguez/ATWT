@@ -25497,7 +25497,8 @@ var RecipeList = function (_React$Component) {
                             movie: {
                                 title: response.results[0].title,
                                 description: response.results[0].overview,
-                                release: response.results[0].release_date
+                                release: response.results[0].release_date,
+                                image: 'https://image.tmdb.org/t/p/w500/' + response.results[0].poster_path
                             }
                         });
                     }
@@ -25569,6 +25570,11 @@ var RecipeList = function (_React$Component) {
                         _react2.default.createElement(
                             'ul',
                             null,
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                _react2.default.createElement('img', { src: this.state.movie.image })
+                            ),
                             _react2.default.createElement(
                                 'li',
                                 null,

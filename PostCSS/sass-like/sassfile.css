@@ -1,0 +1,25 @@
+$variable: #eee;
+$font-size-thing: 14px;
+@define-mixin styles-to-include {
+  padding: 1em;
+  margin: 1em;
+}
+.classname-one {
+  @mixin styles-to-include;
+  background: $variable;
+  .classname-two{
+    font-size: $font-size-thing;
+  }
+}
+
+/*------------------------------------------------
+- Post Css Neat
+--------------------------------------------------*/
+
+.container {
+    @neat-outer-container;
+}
+
+div {
+    @neat-span-columns 6;
+}

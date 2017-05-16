@@ -30,7 +30,6 @@ class RecipeList extends React.Component {
         this.ajaxCall('https://api.edamam.com/search?app_id=434c6602&app_key=b01a6c15b43be02d69245fab18e4f760&q=' + this.state.queryTerm, 'recipes').then((response) => {
             this.ajaxCall('https://api.themoviedb.org/3/search/movie?api_key=e54d77ca7bc748d31f716384bcc7f74a&language=en-US&page=1&include_adult=false&query=' + this.state.queryTerm, 'movie')
         });
-
     }
 
     ajaxCall(url, type) {
@@ -51,7 +50,8 @@ class RecipeList extends React.Component {
                         movie: {
                             title: response.results[0].title,
                             description: response.results[0].overview,
-                            release: response.results[0].release_date
+                            release: response.results[0].release_date,
+                            image: 'https://image.tmdb.org/t/p/w500/' + response.results[0].poster_path
                         }
                     });
                 }
@@ -98,6 +98,9 @@ class RecipeList extends React.Component {
 
                     <div className="alert alert-success">
                         <ul>
+                            <li>
+                                <img src={this.state.movie.image} /> 
+                            </li>
                             <li>
                                 <strong>Title</strong> {this.state.movie.title}
                             </li>
