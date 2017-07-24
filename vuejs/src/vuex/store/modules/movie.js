@@ -1,16 +1,12 @@
-import shop from '../../api/shop'
-import * as types from '../mutation-types'
+import shop from '../../api/food-movie';
+import * as types from '../mutation-types';
+import * as getters from '../getters/movie-getters';
 
 // initial state
 // shape: [{ id, quantity }]
 const state = {
-  added: [],
-  checkoutStatus: null
-}
-
-// getters
-const getters = {
-  checkoutStatus: state => state.checkoutStatus
+  title: '',
+  date: '',
 }
 
 // actions
