@@ -6,8 +6,6 @@
     </div>
   </li>
 </template>
-<style land="scss">
-</style>
 <script>
 export default {
   name: 'recipe-item',

@@ -1,5 +1,6 @@
 <template>
-<main>
+<div>
+  <page-header></page-header>
   <form>
     <input type='text' />
     <button> Search </button>
@@ -22,15 +23,19 @@
       </li>
     </ul>
   </div>
-</main>
+</div>
 </template>
 <script>
   import SearchField from './SeachField.vue';
 
+  import PageHeader from './Header.vue';
+  import PageFooter from './Footer.vue';
+
   export default {
     name: 'home',
     components: {
-      SearchField
+      SearchField,
+      PageHeader
     },
     data() {
       return {

@@ -1,12 +1,17 @@
 <template>
   <header>
+    <nav>
+      <ul>
+       <li><router-link to="/">/</router-link></li>
+       <li><router-link to="/recipe">/recipe</router-link></li>
+       <li><router-link to="/movie">/movie</router-link></li>
+      </ul>
+    </nav>
   </header>
 </template>
-<style lang='scss'>
-</style>
 <script>
 export default {
-  name: 'movie-item',
+  name: 'page-header',
   data(){
     return {}
   },
