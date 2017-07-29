@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li class="col s3">
     <div>
       <img src="http://lorempixel.com/400/200/" />
       <a href="#0">Recipe Thing</a>
@@ -12,7 +12,7 @@ export default {
   data() {
     return {}
   },
-  props:{},
+  props:['recipe'],
   methods: {}
 }
 </script>
