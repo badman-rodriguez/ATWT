@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <form class="row">
-      <input type='text' class="col s9"/>
-      <button class="col s3"> Search </button>
-    </form>
+    <search-field></search-field>
     <div class="row">
       <h3>
         Movie Item
@@ -27,14 +24,16 @@
     </div>
     <div>
       <ul class="row">
-        <recipe-item v-for="recipe in recipes" :key="recipe.id" :recipe="recipe"></recipe-item>
+        <recipe-item v-for="(recipe, key) in recipes" :key="key" :recipe="recipe.recipe"></recipe-item>
       </ul>
     </div>
   </div> 
 </template>
 
 <script>
-import RecipeItem from './components/RecipeItem'
+import RecipeItem from './components/RecipeItem';
+import SearchField from './components/SeachField';
+import {bus} from './helpers/apiCalls.js'
 export default {
   name: 'app',
   data() {
@@ -44,18 +43,13 @@ export default {
     }
   },
   components: {
-    RecipeItem
+    RecipeItem,
+    SearchField
   },
   mounted() {
-    var i;
-    for(i=0; i < 4; i++){
-      this.recipes.push({
-        image_src: '',
-        url: '',
-        title: 'recipe greatness',
-        id: i
-      })
-    }
+    bus.$on('updateList', (results) => {
+      this.recipes = results.hits;
+    });
   }
 }
 </script>

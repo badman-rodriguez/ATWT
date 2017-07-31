@@ -1,8 +1,8 @@
 <template>
   <li class="col s3">
     <div>
-      <img src="http://lorempixel.com/400/200/" />
-      <a href="#0">Recipe Thing</a>
+      <img :src="recipe.image" />
+      <a :href="recipe.url">{{recipe.label}} </a>
     </div>
   </li>
 </template>
