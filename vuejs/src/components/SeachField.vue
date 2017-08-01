@@ -1,9 +1,14 @@
 <template>
-  <form class="row">
+  <form class="search-field row">
     <input type="text" class="col s9" v-model="query_term"/>
-    <button class="col s3" @click.prevent="search"> Search </button>
+    <button class="col s3 btn" @click.prevent="search"> Search </button>
   </form>
 </template>
+<style lang="scss">
+  .search-field {
+    padding: 1em;
+  }
+</style>
 <script>
 import { mashupCalls, bus } from '../helpers/apiCalls';
 

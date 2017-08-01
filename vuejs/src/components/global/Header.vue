@@ -2,9 +2,9 @@
   <header>
     <nav>
       <ul>
-       <li><router-link to="/">/</router-link></li>
-       <li><router-link to="/recipe">/recipe</router-link></li>
-       <li><router-link to="/movie">/movie</router-link></li>
+       <li><router-link to="/">Home</router-link></li>
+       <li><router-link to="/Info">Site Info</router-link></li>
+       <li><router-link to="/Magic">Magical Corner</router-link></li>
       </ul>
     </nav>
   </header>

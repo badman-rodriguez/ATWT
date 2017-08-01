@@ -1,24 +1,28 @@
 <template>
   <div class="row">
-    <h3>
-      Movie Item
-    </h3>
-    <div class="col s6 center-align">
-      <div class="card">
-        <div class="card-image">
-          <img v-if="movie_item.image != null" :src="movie_item.image" />
-          <span class="card-title">{{ movie_item.title }}</span>
-        </div>
-        <div class="card-content">
-          <p>{{ movie_item.description }}</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-        </div>
+      <h3>
+        {{ movie_item.title }}
+      </h3>
+      <div class="col s12 m6">
+        <img class="movie-image" :src="movie_item.image" />
       </div>
-    </div>
+
+      <div class="col s12 m6">
+        <ul class="left-align">
+          <li>
+            <h4> Description</h4> {{ movie_item.description }}</li>
+          <li> <h4> Release</h4> {{ movie_item.release }}</li>
+          <li> <h4> Popularity </h4> {{ movie_item.popularity }}</li>
+          <li> <h4> Release </h4> {{ movie_item.release }}</li>
+        </ul>
+      </div>
   </div>
 </template>
+<style lang="scss">
+  .movie-image {
+    width: 100%;
+  }
+</style>
 <script>
   import {bus} from '../helpers/apiCalls.js'
 
@@ -27,10 +31,10 @@
     data() {
       return {
         movie_item: {
-          title: 'Search for a Recipe',
-          description: 'Get a recipe and then get a movie with that search',
+          title: '',
+          description: '',
           release: '',
-          image: null
+          image: 'https://placeimg.com/480/640/any/grayscale'
         }
       }
     },
@@ -40,7 +44,9 @@
           title: result.title,
           description: result.overview,
           release: result.release_date,
-          image: 'https://image.tmdb.org/t/p/w500/' + result.poster_path
+          image: 'https://image.tmdb.org/t/p/w500/' + result.poster_path,
+          id: result.id,
+          popularity: result.popularity
         }
       });
     },

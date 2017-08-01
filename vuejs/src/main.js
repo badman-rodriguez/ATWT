@@ -1,10 +1,12 @@
-import Vue from 'vue'
-import Home from './Home'
-import router from './router'
+import Vue from 'vue';
+import FoodMovie from './FoodMovie';
+import router from './router';
+import store from './vuex/store';
 
 new Vue({
   el: '#app',
+  store,
   router,
-  template: '<home/>',
-  components: { Home }
+  template: '<food-movie/>',
+  components: { FoodMovie }
 })
