@@ -4,7 +4,7 @@
         <movie-item></movie-item>
         <div class="container">
             <ul class="row">
-                <recipe-item v-for="(recipe, key) in recipes" :key="key" :recipe="recipe.recipe"></recipe-item>
+                <recipe-item v-for="(recipe, key) in recipess" :key="key" :recipe="recipe.recipe"></recipe-item>
             </ul>
         </div>
     </main>
@@ -16,13 +16,20 @@
   
     import {bus} from '../../helpers/apiCalls.js';
 
+    import { mapGetters, mapActions } from 'vuex'
+
     export default {
         name: 'home',
         data() {
             return {
-                recipes: [],
-                movie: {}
+                recipess: []
             }
+        },
+          computed: {
+        // mix the getters into computed with object spread operator
+        ...mapGetters([
+            'recipes'        
+            ])
         },
         components: {
             RecipeItem,
@@ -31,8 +38,13 @@
         },
         mounted() {
             bus.$on('updateList', (results) => {
-                this.recipes = results.hits;
+                this.recipess = results.hits;
             });
+        },
+        methods: {
+            ...mapActions([
+                'getRecipes'
+            ])
         }
     }
 </script>

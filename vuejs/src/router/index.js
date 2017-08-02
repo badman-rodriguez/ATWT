@@ -11,6 +11,6 @@ export default new Router({
   routes: [
     { path: '/', component: Home},
     { path: '/info', component: Info,  props: {} },
-    { path: '/pages', component: Magic, props: {} }
+    { path: '/magic', component: Magic, props: {} }
  ]
 });

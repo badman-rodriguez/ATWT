@@ -12,8 +12,7 @@
           <li>
             <h4> Description</h4> {{ movie_item.description }}</li>
           <li> <h4> Release</h4> {{ movie_item.release }}</li>
-          <li> <h4> Popularity </h4> {{ movie_item.popularity }}</li>
-          <li> <h4> Release </h4> {{ movie_item.release }}</li>
+          <li> <h4> Popularity </h4> {{ movie_item.popularity }} <span v-if="movie_item.popularity"> out of 10 </span></li>
         </ul>
       </div>
   </div>
