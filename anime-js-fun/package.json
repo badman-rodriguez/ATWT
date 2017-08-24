@@ -1,0 +1,17 @@
+{
+  "name": "anime-js-fun",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "animejs": "^2.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  },
+  "scripts": {
+    "start": "babel js/animation.js --watch --out-file dist/animation-compiled.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
