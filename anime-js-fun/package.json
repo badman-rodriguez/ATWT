@@ -6,10 +6,16 @@
     "animejs": "^2.0.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "requirejs": "^2.3.5"
   },
   "scripts": {
-    "start": "babel js/animation.js --watch --out-file dist/animation-compiled.js"
+    "build-js": "watchify js/animation.js -o dist/animation-compiled.js -t [ babelify --presets [ es2015 ] ]",
+    "build-css": "gulp sass:watch"
   },
   "keywords": [],
   "author": "",

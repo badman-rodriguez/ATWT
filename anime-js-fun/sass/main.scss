@@ -1,0 +1,27 @@
+$base-color: #eee;
+ 
+.navbar {
+    margin-top: 1em;
+}
+
+.columns {
+    margin-top: 1em;
+}
+
+.no-input  {
+    border: none;
+    font-weight: 700; 
+    width: 1em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.numbers {
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    background: lightblue;
+    position: relative;
+}
