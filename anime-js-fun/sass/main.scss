@@ -1,5 +1,5 @@
 $base-color: #eee;
- 
+
 .navbar {
     margin-top: 1em;
 }
@@ -10,13 +10,14 @@ $base-color: #eee;
 
 .no-input  {
     border: none;
-    font-weight: 700; 
+    font-weight: 700;
     width: 1em;
     text-align: center;
     font-size: 1em;
 }
 
 .numbers {
+  width:200px
 }
 
 .square {
@@ -24,4 +25,16 @@ $base-color: #eee;
     height: 20px;
     background: lightblue;
     position: relative;
+}
+
+.ml {
+  margin-left: 1em;
+}
+
+.mt {
+  margin-top: 3em;
+}
+
+.mb {
+  margin-bottom: 3em;
 }

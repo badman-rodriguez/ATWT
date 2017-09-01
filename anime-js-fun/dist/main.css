@@ -11,8 +11,20 @@
   text-align: center;
   font-size: 1em; }
 
+.numbers {
+  width: 200px; }
+
 .square {
   width: 20px;
   height: 20px;
   background: lightblue;
   position: relative; }
+
+.ml {
+  margin-left: 1em; }
+
+.mt {
+  margin-top: 3em; }
+
+.mb {
+  margin-bottom: 3em; }
