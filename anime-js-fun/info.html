@@ -1,4 +1,4 @@
-<html lang="en-us">
+﻿<html lang="en-us">
     <head>
         <meta charset="utf-8">
         <title>ATWT &amp; Anime Js</title>
@@ -9,9 +9,8 @@
 
     <body>
         <nav class="navbar">
-        <div class="navbar-brand">
-            <!-- navbar items, navbar burger ... -->
-        </div>
+            <div class="navbar-brand">
+            </div>
         </nav>
         <div class="columns">
             <aside class="menu column is-one-quarter">
@@ -20,28 +19,36 @@
                 </p>
                 <ul class="menu-list">
                     <li><a href="info.html">Infographic</a></li>
-                    <li><a href="sidescroll.html">Side Scoll</a></li>
-                    <li><a href="random.html">Random Things</a></li>
+                    <li><a href="sidescroll.html">Banner Ad</a></li>
                 </ul>
             </aside>
-            <main class="column">
-                <header>
+            <main class="column p-all">
+                <header id="top-section">
                     <h1> Daily Schedule</h1>
                     <h2> On how to make an App</h2>
                 </header>
-                <ul>
+                <ul id="mid-section">
                     <li class="columns">
                         <div class="column tier-one">
-                            <span class="title">
+                            <span class="title align-right">
                                 <input class="no-input start-hour" value="0">-<input class="no-input end-hour" value="0">am
                             </span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor elit ut lectus
-                            gravida, ut sollicitudin dui ullamcorper. Sed vel dignissim tellus. Ut convallis
-                            elementum libero ac bibendum. Mauris eleifend, orci ut facilisis sollicitudin,
-                            ex ipsum laoreet elit, eget vehicula arcu est id ligula. </p>
+                            <p>
+                                You probably haven't heard of them <br /> 
+                                cold-pressed artisan YOLO bicycle <br />
+                                rights seitan leggings try-hard lyft trust <br />
+                                fund pinterest farm-to-table single-origin <br />
+                                coffee austin taiyaki. 
+                               
+                                <ul class="breadcrumb mt-half fright">
+                                    <li class="ml-half"> Wolf mixtape </li>
+                                    <li class="ml-half"> selfies quinoa </li>
+                                    <li class="ml-half"> axe venmo </li>
+                                </ul>
+                            </p>
                         </div>
                         <div class="column tier-one-image">
-                            <img src="http://via.placeholder.com/250x250" />
+                            <img class="w100" src="dist/images/early-work.png" />
                         </div>
                     </li>
                     <li class="columns">
@@ -70,12 +77,18 @@
                           </g>
                           </svg>
                         </div>
-                        <div class="column">
+                        <div class="column second-tier">
                           <span class="title"> 7-8am </span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor elit ut lectus
-                            gravida, ut sollicitudin dui ullamcorper. Sed vel dignissim tellus. Ut convallis
-                            elementum libero ac bibendum. Mauris eleifend, orci ut facilisis sollicitudin,
-                            ex ipsum laoreet elit, eget vehicula arcu est id ligula. </p>
+                            <p class="pt">
+                                Woke squid actually viral pok pok. <br />
+                                Cronut put a bird on it squid slow-carb <br />
+                                crucifix chambray humblebrag, yr craft beer <br />
+                                artisan messenger bag cornhole lumbersexual 90's <br />
+                                bushwick.<br /> <br /> Raclette post-ironic slow-carb <br />
+                                thundercats, polaroid flexitarian kombucha <br />
+                                palo santo poutine flannel vinyl marfa <br />
+                                man braid affogato. 
+                            </p>
                         </div>
                     </li>
                     <li class="columns">
@@ -91,29 +104,39 @@
                             ex ipsum laoreet elit, eget vehicula arcu est id ligula. </p>
                         </div>
                             <div class="column">
-                            <img src="http://via.placeholder.com/250x250" />
+                            <img src="dist/images/office-work.jpg" />
                         </div>
                     </li>
-                    <li class="columns">
-                        <div class="column">
-                          <ul class="elastic is-clearfix mb">
+                    <li>
+                        <div>
+                            <p class="p-all title has-text-centered">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        </div>
+                         <ul class="elastic mb is-clearfix">
                             <li class="title is-pulled-left six">6pm</li>
                             <li class="title is-pulled-left ml seven">7pm</li>
                             <li class="title is-pulled-left ml eight">8pm</li>
                             <li class="title is-pulled-left ml nine">9pm</li>
                             <li class="title is-pulled-left ml ten">10pm</li>
                           </ul>
-                        </div>
-                        <div class="column" >
-                            <p style="height:450px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor elit ut lectus
-                            gravida, ut sollicitudin dui ullamcorper. Sed vel dignissim tellus. Ut convallis
-                            elementum libero ac bibendum. Mauris eleifend, orci ut facilisis sollicitudin,
-                            ex ipsum laoreet elit, eget vehicula arcu est id ligula. </p>
-                        </div>
+
+                        </>
                     </li>
                 </ul>
             </main>
         </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <p>
+                        <strong>ATWT AnimeJs Example:</strong> by Brian Rodriguez.
+                    </p>
+                    <p>
+                        <i class="fa fa-github"></i>
+                    </p>
+                </div>
+            </div>
+        </footer>
          <script type="text/javascript" src="./dist/animation-compiled.js"></script>
     </body>
 </html>

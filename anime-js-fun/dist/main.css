@@ -1,18 +1,17 @@
 .navbar {
-  margin-top: 1em; }
+  background-color: darkslategrey; }
+
+.menu {
+  padding-left: 1em; }
 
 .columns {
   margin-top: 1em; }
 
-.no-input {
-  border: none;
-  font-weight: 700;
-  width: 1em;
-  text-align: center;
-  font-size: 1em; }
-
 .numbers {
   width: 200px; }
+
+.w100 {
+  width: 70%; }
 
 .square {
   width: 20px;
@@ -20,11 +19,118 @@
   background: lightblue;
   position: relative; }
 
+.fleft {
+  float: left; }
+
+.fright {
+  float: right; }
+
 .ml {
   margin-left: 1em; }
+
+.ml-half {
+  margin-left: .5em; }
 
 .mt {
   margin-top: 3em; }
 
+.mt-half {
+  margin-top: 1.5em; }
+
 .mb {
   margin-bottom: 3em; }
+
+.p-all {
+  padding: 2em; }
+
+.align-right {
+  position: absolute;
+  right: 0; }
+
+.elastic {
+  height: 400px;
+  width: 500px;
+  margin: 0 auto; }
+
+#top-section {
+  padding: 2em;
+  background-color: #f7b000; }
+  #top-section > h1 {
+    font-size: 4em;
+    font-weight: bold;
+    color: #fff; }
+
+#mid-section {
+  background: #feedcf; }
+  #mid-section li.columns {
+    margin: 0; }
+  #mid-section .tier-one {
+    position: relative; }
+    #mid-section .tier-one p {
+      text-align: right;
+      margin-top: 6em; }
+  #mid-section .tier-one-image {
+    text-align: center; }
+  #mid-section .no-input {
+    border: none;
+    font-weight: 700;
+    width: 1em;
+    text-align: center;
+    font-size: 2em;
+    background: transparent; }
+  #mid-section .timeline > li {
+    padding: .5em; }
+  #mid-section .second-tier > .title {
+    font-size: 4em; }
+  #mid-section .second-tier > p {
+    padding-top: 4em; }
+
+.opaque {
+  opacity: 0.4; }
+
+#banner-ad {
+  height: 200px;
+  width: 500px;
+  position: relative;
+  overflow: hidden; }
+  #banner-ad .fa-facebook {
+    font-size: 8em;
+    position: absolute;
+    right: 20px;
+    top: 10px; }
+  #banner-ad .fa-twitter {
+    font-size: 7em;
+    position: absolute;
+    left: 0;
+    top: 50px; }
+  #banner-ad .fa-google-plus {
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 10px;
+    left: 0; }
+  #banner-ad .fa-meetup {
+    font-size: 3em;
+    position: absolute;
+    right: 150px;
+    bottom: 45px; }
+  #banner-ad .fa-reddit {
+    font-size: 3em;
+    position: absolute;
+    left: 150px;
+    top: 15px; }
+  #banner-ad .fa-instagram {
+    font-size: 5em;
+    position: absolute;
+    left: 175px;
+    bottom: 10px; }
+
+.banner-text {
+  font-size: 3em;
+  color: floralwhite;
+  text-align: center;
+  font-weight: 700;
+  position: absolute;
+  top: 10px; }
+
+.fa-smile-o {
+  font-size: 1.5em; }
