@@ -7,7 +7,7 @@ class DummyApiService {
         return axios.get('http://demo6410172.mockable.io/getProducts');
     }
 
-    static searchProducts(queery) {
+    static searchProducts(queryy) {
         return axios.get('http://demo6410172.mockable.io/searchProducts');
     }
 }
