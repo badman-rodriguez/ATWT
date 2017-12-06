@@ -1,6 +1,6 @@
-#ATWT Laravel Project
+# ATWT Laravel Project
 
-###Installation
+### Installation
 - Requirements:  
 	- Composer
 	- Vagrant
@@ -53,7 +53,7 @@ databases:
     - homestead
 ```
 
-#Laravel Migrations and Seeding
+# Laravel Migrations and Seeding
 
 - `php artisan make:migration table_name`
 - `php artisan migrate`
@@ -66,12 +66,12 @@ databases:
 
 - Use MySqlWorkbench or SqlPro to see database changes
 
-#Laravel Model
+# Laravel Model
 - `php artisan make:model`
 - `php artisan make:model MODELNAME --migration`
 - [https://laravel.com/docs/5.5/eloquent-relationships](https://laravel.com/docs/5.5/eloquent-relationships)
 
-#Laravel Routes & Controllers
+# Laravel Routes & Controllers
 - `Route::get` `Route::post` `Route::put` `Route::patch`
 - `Route::middleware`
 - `Route::resource`
@@ -79,10 +79,10 @@ databases:
 
 -`php artisan make:controller`
 
-#Laravel Views
+# Laravel Views
 - Blade Syntax
 - view('name', ['property' => data']);
 	- name will equal name.blade.php in the views folder
 
-#Laravel Cheatsheet
+# Laravel Cheatsheet
 - [http://cheats.jesse-obrien.ca/](http://cheats.jesse-obrien.ca/)
