@@ -5,7 +5,8 @@ const mongoose = require('mongoose');
 const Product = require('./app/models/model'); //created model loading here
 const bodyParser = require('body-parser');
 const path = require('path');
-   
+ 
+// Front End Stuff
 app.use(express.static(path.join(__dirname, 'app_front_end')));    
 
 // mongoose instance connection url connection
@@ -17,8 +18,8 @@ mongoose.connect('mongodb://localhost:27017/StoreDB', {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var routes = require('./app/routes/route'); //importing route
-routes(app); //register the route
+//import the routes
+//register the routes
 
 app.listen(port); 
 
