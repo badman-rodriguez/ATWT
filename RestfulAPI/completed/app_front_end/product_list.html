@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Shopping Black Friday Super Sales</title>
+  <meta name="description" content="Sales so awesome you will melt">
+  <meta name="author" content="Bloop">
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />   
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <a class="back-arrow" href="/"> <i class="fa fa-chevron-left" aria-hidden="true"></i> </a>
+  <header class="hero is-medium is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          LIST Of ALL PRODUCTS
+        </h1>
+      </div>
+    </div>
+  </header>
+  <section id="list-app" class="container is-fluid"  style="width: 90%; padding-top: 32px;">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Created Date</th>
+            <th>Updated Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="product in products">
+            <th><a :href="'edit.html?' + product._id">{{ product.product_name }}</a></th>
+            <th>{{ product.created_date }}</th>
+            <th>{{ product.updated_name }}</th>
+          </tr>
+        </tbody>
+      </table>
+  </section>
+  <script src="js/list.js"></script>
+</body>
+</html>

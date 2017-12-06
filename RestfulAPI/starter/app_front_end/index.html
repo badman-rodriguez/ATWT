@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Shopping Black Friday Super Sales</title>
+  <meta name="description" content="Sales so awesome you will melt">
+  <meta name="author" content="Bloop">
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />   
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  
+  <header class="hero is-medium is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Shopping Black Friday Super Sales
+        </h1>
+        <img class="storefront" src="assets/flat-store.jpg" />
+      </div>
+    </div>
+  </header>
+
+  <section id="store-app" class="container is-fluid" style="width: 90%; padding-top: 32px;">
+    <ul class="columns">
+      <li class="column" v-for="product in products">
+        <div class="card">
+            <div class="card-content">
+              <p class="title">
+                  {{ product.product_description }}
+              </p>
+              <p class="subtitle">
+                  <!-- <a :href="formatUrl(product)">{{ product.product_name }} </a> -->
+                  <a :href="'/product.html?' + product._id">{{ product.product_name }} </a>
+              </p>
+            </div>
+            <footer class="card-footer">
+              <p class="card-footer-item">
+                <span>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>                    
+                </span>
+              </p>
+            </footer>
+          </div>
+      </li>
+    </ul>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+.hero {
+  text-align: center
+}
+
+.storefront {
+  width: 25%;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: white;
+}
+
+.back-arrow:hover {
+  color: #eee;
+}
+
+.success {
+  width: 100%;
+  top:0;
+  left:0;
+  text-align: center;
+  position: fixed;
+  color: lightgreen;
+  font-size: 200px;
+  background: white;
+  display: none;
+}
+
+.fadeIn {
+  animation:fIn 0.6s;
+  display: block;
+}
+
+.fadeOut {
+  animation:opac 0.6s;
+  display: none;
+}
+
+@keyframes fIn{
+  from{opacity:0} 
+  to{opacity:1}
+}
+
+@keyframes fOut{
+  from{opacity:1} 
+  to{opacity:0}
+}

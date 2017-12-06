@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Shopping Black Friday Super Sales</title>
+  <meta name="description" content="Sales so awesome you will melt">
+  <meta name="author" content="Bloop">
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />   
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <section id="product-app">
+    <a class="back-arrow" href="/"> <i class="fa fa-chevron-left" aria-hidden="true"></i> </a>
+    <header class="hero is-medium is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            {{ product.product_name }}
+          </h1>
+          <img class="storefront" src="assets/product.png" />
+        </div>
+      </div>
+    </header>
+    <section class="container is-fluid"  style="width: 90%; padding-top: 32px;">
+      <h2>PRODUCT DESCRIPTION</h2>
+      <p>
+        {{ product.product_description }}
+      </p>
+      <div>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star-half-o" aria-hidden="true"></i>                    
+      </div>
+    </section>
+  </section>
+  <script src="js/product.js"></script>
+</body>
+</html>

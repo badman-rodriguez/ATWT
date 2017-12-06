@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Shopping Black Friday Super Sales</title>
+  <meta name="description" content="Sales so awesome you will melt">
+  <meta name="author" content="Bloop">
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />   
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <header class="hero is-medium is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Create Product
+        </h1>
+        <img class="storefront" src="assets/create.jpg" />
+      </div>
+    </div>
+  </header>
+  <section id="create-product"  class="container is-fluid" style="width: 90%; padding-top: 32px;" > 
+    <form>
+      <div class="field">
+        <label class="label">Product name</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input"  placeholder="Product Name" value="" v-model="product_form.product_name">
+          <span class="icon is-small is-left">
+            <i class="fa fa-product-hunt"></i>
+          </span>
+        </div>
+      </div>
+      
+      <div class="field">
+        <label class="label">Product description</label>
+        <div class="control">
+          <textarea class="textarea" placeholder="Textarea" v-model="product_form.product_description"></textarea>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="status" v-model="product_form.status" value="pending">
+            Pending
+          </label>
+          <label class="radio">
+            <input type="radio" name="status" v-model="product_form.status" value="published">
+            Published
+          </label>
+        </div>
+      </div>      
+      
+      <div class="field is-grouped">
+        <div class="control">
+          <a id="save-product" class="button is-link" @click="saveProduct">Submit</a>
+        </div>
+      </div>
+    </form>
+    <div id="success-overlay" class="success">
+        <i class="fa fa-check-circle-o" aria-hidden="true"></i>        
+    </div>
+  </section>
+  <script src="js/create.js"></script>  
+</body>
+</html>
